@@ -209,6 +209,40 @@ fig_stats.tight_layout()
 print("\nFeature Statistics:")
 print(feature_stats)
 
+# Scatter matrix plot (excluding R_time)
+feature_df_scatter = feature_df.drop(columns=['R_time'], errors='ignore')
+n_features = len(feature_df_scatter.columns)
+fig_scatter, axs_scatter = plt.subplots(n_features, n_features, figsize=(16, 16))
+
+for i, col_y in enumerate(feature_df_scatter.columns):
+    for j, col_x in enumerate(feature_df_scatter.columns):
+        ax = axs_scatter[i, j]
+        
+        if i == j:
+            # Diagonal: histogram
+            ax.hist(feature_df_scatter[col_x].dropna(), bins=20, color='steelblue', alpha=0.7, edgecolor='black')
+            ax.set_ylabel('Count')
+        else:
+            # Off-diagonal: scatter plot
+            ax.scatter(feature_df_scatter[col_x], feature_df_scatter[col_y], alpha=0.5, s=10, color='darkblue')
+        
+        # Labels
+        if i == n_features - 1:
+            ax.set_xlabel(col_x, fontsize=8)
+        else:
+            ax.set_xticklabels([])
+        
+        if j == 0:
+            ax.set_ylabel(col_y, fontsize=8)
+        else:
+            ax.set_yticklabels([])
+        
+        ax.tick_params(labelsize=6)
+        ax.grid(alpha=0.3)
+
+fig_scatter.suptitle('Feature Scatter Matrix', fontsize=14, y=0.995)
+fig_scatter.tight_layout()
+
 # Visualize
 T = 10  # seconds
 
