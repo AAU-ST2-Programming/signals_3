@@ -1,4 +1,4 @@
-# {{REPO_NAME}}
+# Feature engineering, PPG og regression
 
 - **PowerPoint slideshow**: `{{REPO_NAME}}.pptx`
 - **questions.docx** – `Indeholder spørgsmål som i får i forbindelsen med forlæsningen.`
@@ -6,14 +6,10 @@
 ---
 
 ## ​ Usage
-
-To use this template:
-
-1. Click **Use this template** on GitHub to create a new repo.
-2. Clone it locally:
-   ```bash
-   git clone https://github.com/you/{{REPO_NAME}}.git
-   cd {{REPO_NAME}}
+> ```zsh
+> git clone https://github.com/AAU-ST2-Programming/signals_3.git
+> cd signals_3
+> ```
 
 ## Forberedelse
 
