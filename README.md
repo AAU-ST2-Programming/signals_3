@@ -11,14 +11,24 @@ Følg denne guide nøje for at være klar til undervisningen:
 ### 1. Literatur
 
 **Primær litteratur:**
-- [Data Wrangling with Python af Jacek Gołębiewski (PDF)](https://datawranglingpy.gagolewski.com/datawranglingpy.pdf)
-  - Kapitel 4: Beskrivende statistik og datafordelinger
-  - Kapitel 5: Tidsserier og feature-beskrivelse
+- - [Data Wrangling with Python af Jacek Gołębiewski (PDF)](https://datawranglingpy.gagolewski.com/datawranglingpy.pdf)
+  - 5.1.1 Measures of location
+  - 5.1.2 Measures of dispersion
+  - 5.1.4 Box (and whisker) plots
+  - 7.4 Visualising multidimensional data
+  - 8.4 Pairwise distances and related methods
+  - 9.2.2 from data to linear models
+  - 9.2.3 Least Square Method
+  - 9.2.4 Analysis od residuals
+  - 9.2.7 Descriptive vs Predictive Power
+  - 9.2.8 Regression with scikit learn
 
 - [Databeskyttelsesloven (Retsinformation)](https://www.retsinformation.dk/eli/lta/2018/502)
   - Fokus: dataminimering, behandling af følsomme persondata og sikker opbevaring
 
 **Supplerende litteratur:**
+- [GeeksforGeeks: ML | Linear Regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/)
+- [TutorialsPoint: SciPy - Linear Curve Fitting](https://www.tutorialspoint.com/scipy/scipy_linear_curve_fitting.htm)
 - [NumPy Documentation](https://numpy.org/doc/)
   - https://numpy.org/doc/stable/reference/generated/numpy.diff.html
   - https://numpy.org/doc/stable/reference/generated/numpy.nanmean.html
