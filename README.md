@@ -1,38 +1,80 @@
 # Feature engineering, PPG og regression
 
-- **PowerPoint slideshow**: `{{REPO_NAME}}.pptx`
-- **questions.docx** – `Indeholder spørgsmål som i får i forbindelsen med forlæsningen.`
-- **Lecture specific files** - `En mappe som indeholder filer i skal bruge i forbindelse med forlæsningen.`
+- **Lecture specific files**: files/* – `En mappe med filer til øvelser og eksempler fra undervisningen.`
+
 ---
 
-## ​ Usage
+## Forberedelse til lektionen
+
+Følg denne guide nøje for at være klar til undervisningen:
+
+### 1. Literatur
+
+**Primær litteratur:**
+- [Data Wrangling with Python af Jacek Gołębiewski (PDF)](https://datawranglingpy.gagolewski.com/datawranglingpy.pdf)
+  - Kapitel 4: Beskrivende statistik og datafordelinger
+  - Kapitel 5: Tidsserier og feature-beskrivelse
+
+- [Databeskyttelsesloven (Retsinformation)](https://www.retsinformation.dk/eli/lta/2018/502)
+  - Fokus: dataminimering, behandling af følsomme persondata og sikker opbevaring
+
+**Supplerende litteratur:**
+- [NumPy Documentation](https://numpy.org/doc/)
+  - https://numpy.org/doc/stable/reference/generated/numpy.diff.html
+  - https://numpy.org/doc/stable/reference/generated/numpy.nanmean.html
+- [SciPy Stats Documentation](https://docs.scipy.org/doc/scipy/reference/stats.html)
+  - https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html
+- [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
+  - https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html
+  - https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.errorbar.html
+
+---
+
+### 2. Installationer og opsætning
+- Sørg for at Python og VS Code er installeret (se evt. tidligere guides).
+- Tjek at du har følgende extensions i Visual Studio Code:
+  - `Python`
+  - `jupyter`
+
+- Download eller opdater materialet:
 > ```zsh
 > git clone https://github.com/AAU-ST2-Programming/signals_3.git
 > cd signals_3
+> git pull
 > ```
 
-## Forberedelse
+---
 
-Til hver lektion skal man forvente følgende:
+## Lektionens fokus
 
-Før/efter Kursusgang:
-- Gennemgang af tidligere kursusgange
-  - Vi bygger altid ovenpå tidligere kursusgange
-- Gennemgå nyt materiale, som vil være beskrevet i denne readme
+- Feature engineering fra biosignaler (EKG/PPG)
+- Variation, usikkerhed og visualisering med error bars
+- Introduktion til lineær regression og residualer
+- Fortolkning af sammenhænge mellem features
 
-Tiden er sat således at der vil være:
+---
 
-- 4 timers forberedelser (der hjemme, før undervisning)
-- 4 timers undervisning og samlet opgave regning
-- 4 timers individuel opgaveregning (der hjemme, efter undervisning)
+## Forventninger til forberedelse og undervisning
 
-## Spørgsmål noter
+- **Før/efter kursusgang:**
+  - Gennemgå tidligere kursusgange og kodeeksempler
+  - Læs nyt materiale som beskrevet ovenfor
+- **Tidsforbrug:**
+  - 4 timers forberedelse (hjemme, før undervisning)
+  - 4 timers undervisning og gruppeopgaver
+  - 4 timers individuel opgaveregning (hjemme, efter undervisning)
+
+---
+
+## Spørgsmål og opgaver
 
 - Til hver opgave i undervisningen vil der være:
-  - En opgave beskrivelse,
-  - En guide til hvordan man udfører opgaven.
+  - En opgavebeskrivelse
+  - En guide til hvordan opgaven løses
   - Svar på opgaven
-- Spørgsmålene i opgaveregningen bliver generelt set mere komplicerede, 
-  - De sidste opgaver er en blanding af både den nuværende kursusgang, samt tidligere kursusgange.
-- Til eksamen vil der kun være en opgave beskrivelse.
-  - Det vil altså være op til jer at kunne se hvordan en opgave skal løses ud fra opgave beskrivelsen.
+- Opgaverne bygger videre på hinanden og bliver gradvist sværere.
+- Til eksamen vil der kun være en opgavebeskrivelse – du skal selv kunne vurdere, hvordan opgaven løses.
+
+---
+
+**Husk:** Brug "Data Wrangling with Python" og regressions-eksemplerne i notebooken som din primære kilde til feature-analyse.
