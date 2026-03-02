@@ -1,0 +1,26 @@
+# created_utc,2026-03-02T10:45:12+00:00
+# source_file,/home/nurrix/Documents/ST2-AnvendtProgrammering/signals_3/files/ECGPCG.csv
+# sampling_frequency_hz,8000
+# filter_type,butterworth_bandpass
+# filter_order,2
+# filter_low_hz,1
+# filter_high_hz,150
+# envelope_window_samples,400
+# r_threshold,mean(signal)+std(signal)
+# t_search_window_s,[0.1, 0.6] after R
+# rr_count,13
+# rt_count,13
+# beat_index,RR_s,RT_s
+0,0.782500,0.206875
+1,0.788750,0.220000
+2,0.790625,0.222000
+3,0.774000,0.226250
+4,0.740250,0.209375
+5,0.693750,0.224125
+6,0.659625,0.225000
+7,0.646125,0.222750
+8,0.659625,0.213000
+9,0.684875,0.229250
+10,0.684625,0.220125
+11,0.656125,0.211875
+12,0.634750,0.211875

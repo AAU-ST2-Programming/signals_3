@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import butter, filtfilt
+from datetime import datetime, UTC
 
 
 def envelope(x, window=50):
@@ -23,7 +24,7 @@ def envelope(x, window=50):
         mov_max[i] = np.max(r[start:end])
 
     # 4. Tilføj gennemsnittet tilbage
-    env = mov_max + mean_x
+    env = np.array(mov_max + mean_x)
     return env
 
 
@@ -47,6 +48,7 @@ def peak_detector(data, thr: float):
 
 
 filename = "/home/nurrix/Documents/ST2-AnvendtProgrammering/signals_3/files/ECGPCG.csv"
+filename_out = "/home/nurrix/Documents/ST2-AnvendtProgrammering/signals_3/files/features_ECGPCG.csv"
 
 time, ecg, pcg = np.genfromtxt(filename,delimiter=",", skip_header=1, unpack=True)
 fs = round(1/np.diff(time).mean())
@@ -78,6 +80,43 @@ T_amp = filtered_ecg[T]
 RR = np.array(RR)
 RT = np.array(RT)
 
+# Save to file with meta data
+metadata = {
+    "created_utc": datetime.now(UTC).isoformat(timespec="seconds"),
+    "source_file": filename,
+    "sampling_frequency_hz": fs,
+    "filter_type": "butterworth_bandpass",
+    "filter_order": 2,
+    "filter_low_hz": fc[0],
+    "filter_high_hz": fc[1],
+    "envelope_window_samples": round(fs / 20),
+    "r_threshold": "mean(signal)+std(signal)",
+    "t_search_window_s": "[0.1, 0.6] after R",
+    "rr_count": len(RR),
+    "rt_count": len(RT),
+}
+
+n_rows = max(len(RR), len(RT))
+rr_pad = np.full(n_rows, np.nan)
+rt_pad = np.full(n_rows, np.nan)
+rr_pad[:len(RR)] = RR
+rt_pad[:len(RT)] = RT
+beat_index = np.arange(n_rows)
+
+table = np.column_stack((beat_index, rr_pad, rt_pad))
+
+metadata_header = "\n".join([f"# {key},{value}" for key, value in metadata.items()])
+full_header = f"{metadata_header}\n# beat_index,RR_s,RT_s"
+
+np.savetxt(
+    filename_out,
+    table,
+    delimiter=",",
+    fmt=["%d", "%.6f", "%.6f"],
+    header=full_header,
+    comments="",
+)
+
 
 plt.figure(figsize=(12,8))
 plt.subplot(3,1,1)
@@ -104,5 +143,7 @@ plt.boxplot([RR,RT], vert=False, showmeans=True)
 plt.yticks([1,2],["RR","RT"])
 plt.xlabel("interval [s]")
 plt.xlim((0,1))
+
+
 
 plt.show()
