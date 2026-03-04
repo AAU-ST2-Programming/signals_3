@@ -45,6 +45,7 @@ Følg denne guide nøje for at være klar til undervisningen:
 - Tjek at du har følgende extensions i Visual Studio Code:
   - `Python`
   - `jupyter`
+  - `scikit-learn`
 
 - Download eller opdater materialet:
 > ```zsh
