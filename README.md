@@ -23,8 +23,11 @@ Følg denne guide nøje for at være klar til undervisningen:
   - 9.2.7 Descriptive vs Predictive Power
   - 9.2.8 Regression with scikit learn
 
-- [Databeskyttelsesloven (Retsinformation)](https://www.retsinformation.dk/eli/lta/2018/502)
-  - Fokus: dataminimering, behandling af følsomme persondata og sikker opbevaring
+**Etik**
+- Dataminimering & Formålsbegrænsning: art. 5 https://eur-lex.europa.eu/eli/reg/2016/679/oj
+- Særlige kategorier (helbredsoplysninger): art. 9 https://eur-lex.europa.eu/eli/reg/2016/679/oj
+- Privacy by design: art. 25 https://eur-lex.europa.eu/eli/reg/2016/679/oj
+- Sikkerhed ved behandling: art. 32 https://eur-lex.europa.eu/eli/reg/2016/679/oj
 
 **Supplerende litteratur:**
 - [GeeksforGeeks: ML | Linear Regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/)
@@ -60,7 +63,7 @@ Følg denne guide nøje for at være klar til undervisningen:
 
 - Feature engineering fra biosignaler (EKG/PPG)
 - Variation, usikkerhed og visualisering med error bars
-- Introduktion til lineær regression og residualer
+- Lineær regression og residualer
 - Fortolkning af sammenhænge mellem features
 
 ---
