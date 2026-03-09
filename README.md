@@ -61,10 +61,7 @@ Følg denne guide nøje for at være klar til undervisningen:
 
 ## Lektionens fokus
 
-- Feature engineering fra biosignaler (EKG/PPG)
-- Variation, usikkerhed og visualisering med error bars
-- Lineær regression og residualer
-- Fortolkning af sammenhænge mellem features
+- Basisk fortolkning af sammenhænge mellem features, og hvordan vi kan beskrive dette via Linear regression.
 
 ---
 
